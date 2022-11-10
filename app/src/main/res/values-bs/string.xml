@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Main Activity-->
+    <string name="app_name">Planer</string>
+
+    <string name="today">Danas</string>
+    <string name="tab_day">Dan</string>
+    <string name="tab_week">Sedmica</string>
+    <string name="tab_month">Mjesec</string>
+    <string name="tab_year">Godina</string>
+
+
+    <!--Create New Task Activity-->
+    <string name="title_activity_new_task_event">Kreiraj novu obavezu</string>
+
+    <string name="title">Naslov</string>
+    <string name="date">Postavi datum</string>
+    <string name="alarm">Postavi alarm</string>
+
+    <string name="calender_button_image">Dugme za kalendar</string>
+    <string name="alarm_img_button">Dugme za alarm</string>
+
+    <string name="radio_btn_type">Tip</string>
+    <string name="radio_btn_task">Obaveza</string>
+    <string name="radio_btn_event">Događaj</string>
+
+    <string name="radio_btn_priority">Prioritet</string>
+    <string name="radio_btn_low">Nisak</string>
+    <string name="radio_btn_medium">Srednji</string>
+    <string name="radio_btn_high">Visok</string>
+
+    <string name="txt_description">Deskripcija</string>
+
+
+    <!--Progress Activity-->
+    <string name="activity_progress_title">Progres</string>
+
+    <string name="string_progress_day">Dnevni</string>
+    <string name="btn_week">Sedmični</string>
+    <string name="btn_month">Mjesečni</string>
+    <string name="btn_year">Godišnji</string>
+
+    <string name="no_tasks_string">Nema obaveza</string>
+    <string name="canceled_tasks">Otkazane</string>
+    <string name="completed_tasks">Završene</string>
+    <string name="active_tasks">Aktivne</string>
+
+    <!--Details Activity-->
+    <string name="title_activity_task_details">Detalji</string>
+    <string name="status_active">Aktivno</string>
+    <string name="status_completed">Završeno</string>
+    <string name="status_canceled">Otkazano</string>
+
+    <string name="no_alarm">Alarm nije postavljen</string>
+    <string name="set_alarm">Alarm postavljen u:</string>
+
+    <string name="description_validation">Opis je previše dugačak</string>
+    <string name="priority_validation">Izaberite prioritet!</string>
+    <string name="title_validation">Polje ne može biti prazno!</string>
+    <string name="type_validation">Izaberite tip!</string>
+
+    <string name="alarm_canceled">Alarm je otkazan</string>
+
+    <!--Fragment Today-->
+    <string name="list_of_tasks">Lista Obaveza</string>
+    <string name="list_of_events">Lista Događaja</string>
+    <string name="no_events_string">Nema događaja</string>
+
+    <!--Fragment Week-->
+    <string name="monday">Ponedeljak</string>
+    <string name="tuesday">Utorak</string>
+    <string name="wednesday">Srijeda</string>
+    <string name="thursday">Četvrtak</string>
+    <string name="friday">Petak</string>
+    <string name="saturday">Subota</string>
+    <string name="sunday">Nedelja</string>
+
+    <string name="no_more">Nema više</string>
+    <string name="less">Manje</string>
+    <string name="more">Više</string>
+    <string name="no_tasks">Nema zadatih obaveza ni događaja</string>
+
+    <!--Fragment Month-->
+    <string name="monthlyEvents">Događaji ovog mjeseca</string>
+    <string name="on"> </string>
+
+    <!--Fragment Year-->
+    <string name="jan">JAN</string>
+    <string name="feb">FEB</string>
+    <string name="mar">MART</string>
+    <string name="apr">APR</string>
+    <string name="may">MAJ</string>
+    <string name="june">JUN</string>
+    <string name="july">JUL</string>
+    <string name="aug">AVG</string>
+    <string name="sep">SEP</string>
+    <string name="oct">OKT</string>
+    <string name="nov">NOV</string>
+    <string name="dec">DEC</string>
+
+    <!--Splash Screen Activity-->
+    <string name="background_content_description">Splash Background</string>
+    <string name="author">"Kreirala Dragana Pavlovic Malesic"</string>
+
+
+    <!--Menus-->
+    <string name="action_done">Gotovo</string>
+    <string name="action_edit">Uredi</string>
+    <string name="action_settings">Podešavanja</string>
+    <string name="action_progress">Progres</string>
+
+    <!--Settings-->
+    <string name="title_activity_settings">Podešavanja</string>
+
+    <!--Settings Preferences-->
+    <string name="language_title">Jezik</string>
+    <string name="theme_title">Teme</string>
+    <string name="reminder_title">Dnevni podsjetnik</string>
+    <string name="tutorial_title">Uputstvo</string>
+    <string name="timer">Vrijeme</string>
+
+    <string name="is_set">Aktiviraj podsjetnik</string>
+    <string name="is_disabled">Isključi podsjetnik</string>
+
+    <!--Tutorial Activity-->
+
+    <string name="welcome">Dobrodošli u Planner, aplikaciju za praćenje vaših obaveza</string>
+    <string name="lets_start">Počnimo!</string>
+
+    <string name="first_page">Ovo je vaša lista dnevnih obaveza i događaja! Ako želite da kreirate novi, pritisnite dugme na dnu!</string>
+    <string name="second_page">Pritiskom na dugme, možete odabrati obavezu ili događaj, promijeniti datum, i postaviti alarm. Takođe možete odabrati prioritet obaveze. </string>
+
+    <string name="third_page">Da obrišete događaj ili obavezu, prevucite na lijevo, da poništite prevucite na desno. Čekirajte obavezu kada je završite!</string>
+    <string name="forth_page">Pritiskom na događaj ili obavezu na dnevnom rasporedu otvorićete stranicu sa detaljima gdje možete ih uređivati, a držanjem pritiska možete da ih pomjerite.</string>
+    <string name="fifth_page">U sedmičnom pregledu možete da pretražujete kroz sedmice, i pregledate dnevne obaveze i događaje. U mjesečnom pregledu možete da pretražujete događaje po mjesecu.</string>
+    <string name="sixth_page">U kartici Progres možete da pregledate vašu efikasnost i produktivnost tokom proizvoljnog perioda.</string>
+    <string name="seventh_page">Možete promijeniti temu, jezik, kao i dnevne napomene za produktivnost.</string>
+
+
+
+    <string name="end_of_tutorial">Krenimo planirati!</string>
+    <string name="cancel">Otkaži</string>
+
+
+    <!--Daily reminder-->
+    <string name="notification_header">Dnevni podsjetnik</string>
+    <string name="notification_description">Da li su sve obaveze završene?</string>
+
+    <string name="alarm_disabled">ALARM OTKAZAN!</string>
+    <string name="alarm_enabled">ALARM POSTAVLJEN!</string>
+
+
+</resources>

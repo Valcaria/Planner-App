@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="title_text_size">25sp</dimen>
+    <dimen name="radio_button_text_size">20sp</dimen>
+
+
+    <dimen name="week_layout_padding_top">5dp</dimen>
+    <dimen name="week_day_layout_padding_left">10dp</dimen>
+    <dimen name="week_table_layout_padding_left">20dp</dimen>
+    <dimen name="week_text_size">20sp</dimen>
+
+</resources>

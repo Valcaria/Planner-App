@@ -1,0 +1,60 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/title_activity_settings"
+        app:key="settings">
+
+        <SwitchPreference
+            app:key="notification"
+            app:summaryOff="@string/is_set"
+            app:summaryOn="@string/is_disabled"
+            app:title="@string/reminder_title" />
+
+        <ListPreference
+            app:defaultValue="reminder_two"
+            app:entries="@array/reminder_entries"
+            app:entryValues="@array/reminder_values"
+            app:key="reminder"
+            app:title="@string/timer"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="en"
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="language"
+            app:title="@string/language_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="theme_one"
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_values"
+            app:key="theme"
+            app:title="@string/theme_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:key="tutorial"
+            app:title="@string/tutorial_title"
+            app:useSimpleSummaryProvider="false" />
+    </PreferenceCategory>
+
+  <!--  <PreferenceCategory app:title="@string/settings_header">
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="@string/reminder_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/action_progress"
+            app:summaryOn="@string/action_progress"
+            app:title="@string/reminder_title" />
+
+    </PreferenceCategory>
+-->
+
+
+
+</PreferenceScreen>

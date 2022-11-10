@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.example.planerapplication.helper.Converter" />
+        <variable
+            name="viewModel"
+            type="com.example.planerapplication.viewmodel.ProgressViewModel" />
+    </data>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ProgressChartActivity"
+    tools:ignore="UseCompoundDrawables"
+    android:id="@+id/progress_layout">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/Theme.PlanerApplication.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:title="@string/activity_progress_title"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.PlanerApplication.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:orientation="horizontal"
+           android:layout_weight="0.2">
+
+           <TextView
+               android:id="@+id/txtViewDate"
+               android:layout_width="285dp"
+               android:layout_height="65dp"
+               android:layout_marginStart="20dp"
+               android:layout_marginTop="15dp"
+               android:layout_marginEnd="20dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:gravity="center_vertical"
+               android:text="@={Converter.dateToString(viewModel.today)}"
+               android:textSize="18sp"
+               android:textColor="?attr/colorOnSecondary"/>
+
+           <ImageButton
+               android:id="@+id/imgBtnCalendar"
+               android:layout_width="65dp"
+               android:layout_height="65dp"
+               android:layout_marginTop="15dp"
+               android:background="@drawable/round_button"
+               app:srcCompat="@drawable/ic_calender"
+               android:contentDescription="@string/calender_button_image"
+               android:onClick="@{(v)->viewModel.onDisplayTimePickerDialogClick()}"
+               app:tint="?attr/colorOnPrimary" />
+       </LinearLayout>
+       <TableLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:stretchColumns="*">
+           <TableRow>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center_vertical"
+                   android:text="@string/string_progress_day"
+                   android:paddingStart="20dp"
+                   android:paddingEnd="20dp"
+                   android:textSize="20sp"
+                   android:layout_gravity="center_horizontal"
+                   android:textColor="?attr/colorOnSecondary" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center_vertical"
+                   android:text="@string/btn_week"
+                   android:paddingStart="20dp"
+                   android:paddingEnd="20dp"
+                   android:textSize="20sp"
+                   android:layout_gravity="center_horizontal"
+                   android:textColor="?attr/colorOnSecondary" />
+           </TableRow>
+
+           <TableRow
+               android:layout_weight="1">
+               <com.github.mikephil.charting.charts.PieChart
+                   android:id="@+id/todayPieChart"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+
+               <com.github.mikephil.charting.charts.PieChart
+                   android:id="@+id/weekPieChart"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+           </TableRow>
+           <TableRow>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center_vertical"
+                   android:text="@string/btn_month"
+                   android:paddingStart="20dp"
+                   android:paddingEnd="20dp"
+                   android:textSize="20sp"
+                   android:layout_gravity="center_horizontal"
+                   android:textColor="?attr/colorOnSecondary" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center_vertical"
+                   android:text="@string/btn_year"
+                   android:paddingStart="20dp"
+                   android:paddingEnd="20dp"
+                   android:textSize="20sp"
+                   android:layout_gravity="center_horizontal"
+                   android:textColor="?attr/colorOnSecondary" />
+           </TableRow>
+
+           <TableRow
+               android:layout_weight="1">
+               <com.github.mikephil.charting.charts.PieChart
+                   android:id="@+id/monthPieChart"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+
+               <com.github.mikephil.charting.charts.PieChart
+                   android:id="@+id/yearPieChart"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+           </TableRow>
+
+       </TableLayout>
+
+       <TableLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="0.35"
+           android:stretchColumns="*">
+           <TableRow
+               android:layout_weight="1">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center_vertical"
+                   android:text="@string/completed_tasks"
+                   android:paddingStart="20dp"
+                   android:paddingEnd="20dp"
+                   android:textSize="20sp"
+                   app:drawableLeftCompat="@drawable/ic_dot"
+                   app:drawableTint="@color/done"
+                   android:textColor="?attr/colorOnSecondary" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center_vertical"
+                   android:paddingStart="20dp"
+                   android:paddingEnd="20dp"
+                   android:text="@string/active_tasks"
+                   android:textColor="?attr/colorOnSecondary"
+                   android:textSize="20sp"
+                   app:drawableLeftCompat="@drawable/ic_dot"
+                   app:drawableTint="@color/active" />
+
+           </TableRow>
+           <TableRow
+               android:layout_weight="1">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center_vertical"
+                   android:paddingStart="20dp"
+                   android:paddingEnd="20dp"
+                   android:text="@string/canceled_tasks"
+                   android:textColor="?attr/colorOnSecondary"
+                   android:textSize="20sp"
+                   app:drawableLeftCompat="@drawable/ic_dot"
+                   app:drawableTint="@color/canceled" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center_vertical"
+                   android:paddingStart="20dp"
+                   android:paddingEnd="20dp"
+                   android:text="@string/no_tasks_string"
+                   android:textColor="?attr/colorOnSecondary"
+                   android:textSize="20sp"
+                   app:drawableLeftCompat="@drawable/ic_dot"
+                   app:drawableTint="@color/grey" />
+           </TableRow>
+       </TableLayout>
+
+   </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout></layout>

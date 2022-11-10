@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.planerapplication">
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".PlannerApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PlanerApplication"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        tools:targetApi="s"
+        tools:ignore="DataExtractionRules">
+        <activity
+            android:name=".view.AddEditTaskActivity"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity"
+            android:theme="@style/Theme.PlanerApplication.NoActionBar"/>
+        <activity
+            android:name=".view.common.TutorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.ProgressChartActivity"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity"
+            android:theme="@style/Theme.PlanerApplication.NoActionBar" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="false"
+            android:parentActivityName=".view.common.SplashScreen"
+            android:theme="@style/Theme.PlanerApplication.NoActionBar" />
+        <activity
+            android:name=".view.common.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.PlanerApplication.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".broadcast.AlarmReceiver" />
+        <receiver android:name=".broadcast.DailyNotification" />
+        <receiver android:name=".broadcast.CancelAlarmBroadcast" />
+    </application>
+</manifest>
